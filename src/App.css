@@ -14,30 +14,245 @@
   padding: 3rem 2.5rem;
   text-align: center;
   color: #fff;
+  width: 100%;
+  max-width: 680px;
 }
 
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 1px;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #e0e0e0;
+.search-form {
+  width: 100%;
 }
 
-.cta-btn {
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
+.input-container {
+  background: rgba(24, 28, 36, 0.5);
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
-  background: #fff;
-  color: #2563eb;
+  background: rgba(16, 20, 26, 0.7);
+  color: #fff;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.input-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.tool-icons {
+  display: flex;
+  gap: 6px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.model-selector {
+  position: relative;
+}
+
+.model-btn {
+  background: rgba(27, 32, 44, 0.5);
+  color: #a0aec0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.model-btn:hover {
+  background: rgba(27, 32, 44, 0.8);
+  color: #fff;
+}
+
+.model-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 280px;
+  background: rgba(27, 32, 44, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  margin-top: 5px;
+  overflow: hidden;
+  text-align: center;
+
+}
+.model-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.priority-label {
+  font-weight: 600;
+  color: #a0aec0;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+.model-option {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #ddd;
+  transition: all 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.model-option:hover {
+  background: rgba(37, 99, 235, 0.6);
+}
+
+.model-option.selected {
+  background: rgba(37, 99, 235, 0.8);
+}
+
+.model-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.model-desc {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.check-icon {
+  color: #fff;
+}
+
+.search-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode-toggle {
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(16, 20, 26, 0.4);
+}
+
+.mode-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.mode-btn.active {
+  background: rgba(37, 99, 235, 0.7);
+  color: #fff;
+}
+
+.submit-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+  transition: all 0.2s;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.result-container {
+  margin-top: 1.5rem;
+  text-align: left;
+  color: #e0e0e0;
+}
+/* --- Additions/overrides for priorities row and AntD radio --- */
+.priorities-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 13px;
+}
+
+.priority-radio .ant-radio-button-wrapper {
+  background: rgba(30,36,43,0.3);
+  color: #bcd;
+  border: none;
+  transition: all 0.2s;
+  box-shadow: none;
+  margin-right: 1px;
+  font-size: 14px;
+}
+
+.priority-radio .ant-radio-button-wrapper-checked {
+  background: #2563eb;
+  color: #fff;
+}
+
+.priority-radio .ant-radio-button-wrapper:not(:first-child)::before {
+  display: none !important;
+}
+
+.priority-radio-row {
+  display: flex;
+  align-items: center;
+}
+
+/* --- minor fix: removes margin-bottom in input so it's flush with other controls --- */
+.search-input {
+  margin-bottom: 0;
 }
