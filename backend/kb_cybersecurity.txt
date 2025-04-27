@@ -1,0 +1,17 @@
+# Knowledge base for Cybersecurity
+# Format: Q&A
+
+Q: We received a suspicious email with attachments. What should we do?
+A: Do not open any attachments or click any links in the email. Forward the suspicious email as an attachment (not by using the standard Forward button) to your IT security team. Check the sender's email address closely for signs of spoofing (slight misspellings of legitimate domains). IT teams should scan attachments in an isolated environment and block the sender domain if confirmed malicious. Check if similar emails were sent to other employees, as this could indicate a targeted attack. If the threat appears widespread, consider issuing an organization-wide security alert with examples of what to look for.
+
+Q: How do I enable multi-factor authentication for our company?
+A: First, identify which systems require MFA protection, prioritizing those with sensitive data access. For Microsoft 365, administrators can enable MFA in the Microsoft 365 admin center under Security > Authentication methods. Plan a phased rollout schedule by department to minimize business disruption. Prepare training materials for end-users explaining how to set up and use MFA applications. Establish an exception process for special cases where standard MFA might not work. Implement monitoring for MFA adoption rates and authentication failures to identify potential issues early.
+
+Q: What should we do if an employee loses their company laptop?
+A: The employee should report the loss immediately to both their manager and IT department. IT should remotely lock the device if possible and initiate a remote wipe if sensitive data could be at risk. Change passwords for any accounts that were accessible from that device. If the device contained sensitive customer data, consult your legal department about potential notification requirements. Check tracking software if installed. File a police report if theft is suspected. Review logs to identify any unusual access attempts following the loss. Update your asset inventory to reflect the loss and document the incident response actions taken.
+
+Q: How do we ensure our data retention meets industry requirements?
+A: Start by identifying the specific industry regulations applicable to your business (GDPR, HIPAA, SOX, etc.). Review your current retention policies and settings across all systems storing business data. Develop appropriate retention periods by data type based on regulatory requirements and business needs. Configure retention settings in your email system, document management platforms, and other data repositories. Document your retention policy thoroughly for compliance evidence. Set up automated compliance reporting to monitor adherence to these policies. Consider investing in data governance tools that can automate retention across multiple systems.
+
+Q: How do we securely share files with external parties?
+A: Use enterprise-grade secure file sharing solutions like SharePoint external sharing, secure FTP, or specialized secure file transfer services. Configure expiration dates for shared links so they don't provide indefinite access. Set up password protection for sensitive files, sending the password through a different communication channel than the link. Enable audit logging to track who accesses shared files and when. Train users on secure sharing practices, emphasizing the risks of using unauthorized consumer file sharing services. Consider implementing Data Loss Prevention (DLP) policies to prevent unauthorized sharing of sensitive information.

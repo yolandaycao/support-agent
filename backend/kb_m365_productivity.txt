@@ -1,0 +1,20 @@
+# Knowledge base for M365 & Productivity (Productivity & Software)
+# Format: Q&A
+
+Q: Why can't I access my Outlook emails?
+A: First check your internet connection and verify you can access other websites. Try accessing other Microsoft services to confirm if it's an Outlook-specific issue. Make sure your login credentials are correct and that Outlook isn't in offline mode. Check Microsoft's service status page (status.office365.com) for any reported outages. If these steps don't resolve the issue, try clearing your Outlook cache and restarting the application. If the problem persists, it might be related to account security blocks or organizational policies.
+
+Q: How do I recover a deleted file from SharePoint?
+A: For recently deleted files, check the SharePoint Recycle Bin by clicking the Recycle Bin icon in the left navigation panel. If you don't find it there, check the second-stage Recycle Bin (site admins can access this). For files deleted more than 93 days ago, these will have been permanently removed from the Recycle Bins, but might be available from backups. Contact your system administrator to check if the file can be restored from a backup. Site administrators should also review retention policies to prevent future data loss issues.
+
+Q: Teams is running slowly for our entire organization. What should we do?
+A: Start by checking the Microsoft 365 service status page for any reported Teams issues. Verify your organization's internet bandwidth to ensure it's sufficient for your users. Check if any recent Teams updates or changes coincided with the performance issues. Review the specifications of user devices against Teams requirements. Investigate for network congestion, especially during peak usage hours. Have users try clearing their Teams cache. If the issue is widespread and persistent, consider opening a support ticket with Microsoft.
+
+Q: How can I set up shared calendars for my department?
+A: In Outlook, create a new calendar by clicking "Add Calendar" and then "Create New Calendar." Name it appropriately for your department. Right-click on the new calendar and select "Sharing Permissions." Add the members of your department and set their permission levels. For Microsoft 365 users, you can also create a Microsoft 365 Group which automatically provides a shared calendar, along with other collaboration tools. Alternatively, you can create a SharePoint calendar for broader visibility and integration with other SharePoint features.
+
+Q: Our CRM integration with our email system stopped working. How do we fix it?
+A: First, verify the API connection status between your CRM and email systems. Check if there were any recent updates to either system that might have broken the integration. Review authentication tokens and credentials to ensure they haven't expired. Examine firewall or security settings for any changes that might be blocking the connection. Check system logs for specific error messages that could identify the problem. Test with a sample account to determine if the issue affects all users or just some. If these steps don't resolve the issue, contact your CRM vendor's support team for assistance.
+
+Q: How do I set up automatic email signatures for our company?
+A: The approach depends on your email platform. For Microsoft 365, administrators can implement organization-wide signatures using Exchange transport rules in the Exchange admin center. For individual setups in Outlook, go to File > Options > Mail > Signatures. For centralized management, consider third-party signature management tools that integrate with your email system. These tools can ensure consistent branding and provide dynamic content based on user departments or roles. Make sure to include all required legal disclaimers and contact information in your signature templates.

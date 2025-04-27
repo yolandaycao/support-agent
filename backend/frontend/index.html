@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Processing Agent</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; background: #f9f9f9; }
+        h1 { color: #333; }
+        textarea { width: 100%; height: 100px; margin-bottom: 10px; }
+        button { padding: 10px 20px; font-size: 16px; }
+        .result { background: #fff; border: 1px solid #ddd; padding: 20px; margin-top: 20px; border-radius: 6px; }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Ticket Processing Agent</h1>
+    <form id="ticketForm">
+        <label for="ticket">Enter Support Ticket:</label><br>
+        <textarea id="ticket" name="ticket" required></textarea><br>
+        <button type="submit">Analyze Ticket</button>
+    </form>
+    <div id="result" class="result" style="display:none;"></div>
+    <script>
+        document.getElementById('ticketForm').onsubmit = async function(e) {
+            e.preventDefault();
+            // Show loading indicator while waiting for agent response
+            document.getElementById('result').innerHTML = '<em>Analyzing ticket, please wait...</em>';
+            document.getElementById('result').style.display = 'block';
+            const ticket = document.getElementById('ticket').value;
+            const response = await fetch('/analyze?ts=' + new Date().getTime(), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ticket })
+            });
+            const data = await response.json();
+            let html = `<h2>Analysis Result</h2>`;
+            html += `<strong>Priority:</strong> ${data.assigned_priority}<br>`;
+            html += `<strong>Category:</strong> ${data.assigned_category}<br>`;
+            html += `<strong>Routed To:</strong> ${data.routed_to}<br>`;
+            html += `<strong>Justification:</strong> ${data.justification}<br>`;
+            html += `<strong>Answer:</strong> <span style="color:${data.answer === 'escalation needed' ? 'red' : 'green'}">${data.answer}</span><br>`;
+            document.getElementById('result').innerHTML = html;
+            document.getElementById('result').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
