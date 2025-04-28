@@ -15,8 +15,8 @@ export interface TicketResponse {
   
   export const submitTicket = async (query: string, priority: string, model: string): Promise<TicketResponse> => {
     try {
-      // Looking at ticketAgent.js, the backend only needs the ticket content
-      // The backend will handle priority assessment and categorization internally
+      console.log('Submitting ticket:', { query, priority, model }); // Debug log
+      
       const response = await fetch('/analyze', {
         method: 'POST',
         headers: {
@@ -24,16 +24,27 @@ export interface TicketResponse {
         },
         body: JSON.stringify({
           ticket: query
-          // The backend ignores priority_level and model, so we can remove them
+          // Backend only requires 'ticket' parameter
         }),
       });
       
+      console.log('Response status:', response.status, response.statusText);
+      
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || 'Failed to submit ticket');
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        
+        try {
+          const errorData = JSON.parse(errorText);
+          throw new Error(errorData.error || 'Failed to submit ticket');
+        } catch (parseError) {
+          throw new Error(`Server error: ${response.status} ${response.statusText}`);
+        }
       }
       
-      return await response.json();
+      const data = await response.json();
+      console.log('Response data:', data);
+      return data;
     } catch (error) {
       console.error('API error:', error);
       throw error;

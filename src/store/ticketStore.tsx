@@ -18,11 +18,11 @@ export const useTicketStore = create<TicketState>((set) => ({
   submitQuery: async (query: string, priority: string, model: string): Promise<void> => {
     set({ isLoading: true, error: null });
     try {
+      // The backend doesn't use priority or model, but we'll pass them anyway for future flexibility
       const response: TicketResponse = await submitTicket(query, priority, model);
       set({ ticketResponse: response, isLoading: false });
     } catch (error: unknown) {
       console.error('Submit query error:', error);
-      // Improve error message handling
       const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
       set({ error: errorMessage, isLoading: false });
     }

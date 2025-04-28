@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './App.css';
 import { FiSettings, FiPlus, FiLink, FiMic, FiChevronDown } from 'react-icons/fi';
 import { BsCheckLg } from 'react-icons/bs';
-import { Radio, Spin, Tooltip } from 'antd';
+import { Radio, Tooltip, Spin } from 'antd';
 import 'antd/dist/reset.css';
 import { useTicketStore } from './store/ticketStore';
 
@@ -34,6 +34,8 @@ function App() {
   // Get state and actions from the ticket store
   const { isLoading, error, ticketResponse, submitQuery, resetResponse } = useTicketStore();
 
+  console.log('Ticket Response:', ticketResponse);
+
   // Quirk: rotating placeholder
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const placeholders = [
@@ -43,6 +45,7 @@ function App() {
     "How do I select the odd columns in Microsoft Excel?",
     "How do I set up a SoC Network in AWS?",
   ];
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setPlaceholderIndex((prev) => (prev + 1) % placeholders.length);
@@ -68,13 +71,12 @@ function App() {
     e.preventDefault();
     if (!query.trim()) return;
     
-    // Store the query for display
     setSubmitted(`[${priority}] ${query}`);
     
     // Reset previous response
     resetResponse();
     
-    // Submit the query to the backend via our store
+    // Submit the query to the backend
     await submitQuery(query, priority, AIagents[selectedModel].name);
     
     setQuery("");
@@ -155,8 +157,8 @@ function App() {
                 <Tooltip title="Select your priority" placement="bottom">
                   <div className="priority-label">
                     Priority
-                    </div>
-                    </Tooltip>
+                  </div>
+                </Tooltip>
                 <Radio.Group
                   options={[
                     { label: 'Low', value: 'P0' },
@@ -182,6 +184,7 @@ function App() {
             </div>
           </div>
         </form>
+        
         {isLoading && (
           <div className="loading-container">
             <Spin size="large" />
@@ -195,7 +198,7 @@ function App() {
           </div>
         )}
         
-        {submitted && !isLoading && !ticketResponse && (
+        {submitted && !isLoading && !ticketResponse && !error && (
           <div className="result-container">
             <span>You asked:</span>
             <strong>{' '}{submitted}</strong>
@@ -220,7 +223,7 @@ function App() {
               
               <div className="answer-section">
                 <h3>Answer</h3>
-                <p>{ticketResponse.answer}</p>
+                <p>{ticketResponse?.answer}</p>
               </div>
             </div>
           </div>
@@ -229,4 +232,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

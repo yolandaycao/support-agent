@@ -1,7 +1,8 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
-const { OpenAI } = require('openai/index.mjs');
+// Change this line in ticketAgent.js
+const { OpenAI } = require('openai');
 
 const categories = [
   "M365 & Productivity",
