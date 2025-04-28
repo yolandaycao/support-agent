@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import './App.css';
 import { FiSettings, FiPlus, FiLink, FiMic, FiChevronDown } from 'react-icons/fi';
 import { BsCheckLg } from 'react-icons/bs';
-import { Radio, Tooltip } from 'antd';
+import { Radio, Spin, Tooltip } from 'antd';
 import 'antd/dist/reset.css';
+import { useTicketStore } from './store/ticketStore';
 
 const heroVariants = {
   hidden: { opacity: 0, y: 60 },
@@ -29,6 +30,9 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [priority, setPriority] = useState<'P0' | 'P1' | 'P2'>('P1');
   const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  // Get state and actions from the ticket store
+  const { isLoading, error, ticketResponse, submitQuery, resetResponse } = useTicketStore();
 
   // Quirk: rotating placeholder
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
@@ -60,9 +64,19 @@ function App() {
     setQuery(e.target.value);
   };
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSearch = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    setSubmitted(query.trim() ? `[${priority}] ${query}` : null);
+    if (!query.trim()) return;
+    
+    // Store the query for display
+    setSubmitted(`[${priority}] ${query}`);
+    
+    // Reset previous response
+    resetResponse();
+    
+    // Submit the query to the backend via our store
+    await submitQuery(query, priority, AIagents[selectedModel].name);
+    
     setQuery("");
   };
 
@@ -168,16 +182,51 @@ function App() {
             </div>
           </div>
         </form>
+        {isLoading && (
+          <div className="loading-container">
+            <Spin size="large" />
+            <p>Processing your request...</p>
+          </div>
+        )}
         
-        {submitted && (
+        {error && (
+          <div className="error-container">
+            <p>Error: {error}</p>
+          </div>
+        )}
+        
+        {submitted && !isLoading && !ticketResponse && (
           <div className="result-container">
             <span>You asked:</span>
             <strong>{' '}{submitted}</strong>
+          </div>
+        )}
+        
+        {ticketResponse && (
+          <div className="response-container">
+            <div className="response-header">
+              <div className="response-metadata">
+                <span className="priority-tag">Priority: {ticketResponse.assigned_priority}</span>
+                <span className="category-tag">Category: {ticketResponse.assigned_category}</span>
+                <span className="routed-tag">Routed to: {ticketResponse.routed_to}</span>
+              </div>
+            </div>
+            
+            <div className="response-body">
+              <div className="justification-section">
+                <h3>Analysis</h3>
+                <p>{ticketResponse.justification}</p>
+              </div>
+              
+              <div className="answer-section">
+                <h3>Answer</h3>
+                <p>{ticketResponse.answer}</p>
+              </div>
+            </div>
           </div>
         )}
       </motion.section>
     </div>
   );
 }
-
 export default App;

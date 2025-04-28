@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const { OpenAI } = require('openai');
+const { OpenAI } = require('openai/index.mjs');
 const { processTicket } = require('./ticketAgent');
 
 const app = express();
