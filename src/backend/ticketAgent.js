@@ -1,6 +1,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+const fetch = require('node-fetch');
 // Change this line in ticketAgent.js
 const { OpenAI } = require('openai');
 
@@ -114,27 +115,28 @@ async function getLlmAnswer(ticket, category, openai) {
     }
   }
   const systemPrompt =
-    "You are TechSupport Assistant, an AI support specialist for an MSP (Managed Service Provider). Your goal is to provide helpful, accurate, and efficient IT support solutions.\n" +
-    "\nKNOWLEDGE BASE USAGE:\n" +
-    "- ALWAYS refer to the knowledge base first for answers to customer inquiries\n" +
-    "- Match customer questions to similar questions in the knowledge base\n" +
-    "- If an exact match exists, use that answer as your primary response\n" +
-    "- If a partial match exists, adapt the knowledge base answer to the specific question\n" +
-    "- If NO relevant information exists in the knowledge base, clearly mark your response with 'ESCALATION NEEDED' at the beginning and suggest what information a human agent would need to resolve this\n" +
-    "\nApproach every question with these principles:\n" +
-    "1. Be concise - Get to the point quickly without unnecessary explanations\n" +
-    "2. Be practical - Provide specific, actionable steps that solve the problem\n" +
-    "3. Be friendly - Use a supportive, patient tone without being overly casual\n" +
-    "4. Be confident - Express solutions with clarity and certainty when appropriate\n" +
-    "\nWhen responding:\n" +
-    "- Keep answers to 2-3 sentences unless detailed steps are required\n" +
-    "- Treat end users as elementary school students. Use simple, clear language and avoid technical jargons\n" +
-    "- If the ticket is not directly about a bug or error, always end your answer with a clarifying question to help resolve the user's issue.\n" +
+    "You help IT support answer customer questions. Give advice to IT staff what to do.\n" +
+    "\n2. Recommended Actions:\n" +
+    "   - List specific troubleshooting steps for the technician\n" +
+    "   - Highlight required tools or access needed\n" +
+    "   - Suggest relevant documentation or KB articles to reference\n" +
+    "\n3. Client Communication:\n" +
+    "   - Recommend key questions to ask the client\n" +
+    "   - Suggest what information to collect\n" +
+    "   - Note any potential business impact to discuss\n" +
+    "\n4. Resolution Path:\n" +
+    "   - Outline estimated time for resolution\n" +
+    "   - Flag if escalation might be needed\n" +
+    "   - Suggest preventive measures for future\n" +
+    "\nResponse Format:\n" +
+    "- Structure your response in numbered list\n" +
+    "- Be specific and technical - this is for MSP staff\n" +
+    "- If escalation is needed, specify which team or expertise is required\n" +
     kbContent +
     "\nAnswer the following support ticket using the above knowledge base and instructions.";
   try {
     const resp = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: ticket }
@@ -148,21 +150,51 @@ async function getLlmAnswer(ticket, category, openai) {
   }
 }
 
+async function predictDispatch(ticket) {
+  try {
+    const response = await fetch('http://localhost:8001/predict/dispatch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        subject: ticket,
+        problem_type: '',
+        comments: []
+      })
+    });
+    
+    if (!response.ok) {
+      console.error('ML API error:', await response.text());
+      return null;
+    }
+    
+    const prediction = await response.json();
+    return prediction;
+  } catch (error) {
+    console.error('Error calling ML API:', error);
+    return null;
+  }
+}
+
 async function processTicket(ticket, openai) {
   const priority = assessPriority(ticket);
   const category = await categorize(ticket, openai);
   const specialist = routeSpecialist(category);
   const justification = getJustification(priority, category);
-  let answer = searchKb(category, ticket);
-  if (answer === "escalation needed") {
-    answer = await getLlmAnswer(ticket, category, openai);
-  }
-  return {
+  answer = await getLlmAnswer(ticket, category, openai);
+  
+  // Get dispatch prediction from ML API
+  // const dispatchPrediction = await predictDispatch(ticket);
+  // const aiDispatch = dispatchPrediction ? `Ardence suggests assigning to: ${dispatchPrediction.tech}` : '';
+  const aiDispatch = `Ardence suggests assigning to: James`;
+// TODO: revert this
+
+return {
     assigned_priority: priority,
     assigned_category: category,
     routed_to: specialist,
     justification,
-    answer
+    answer,
+    ai_dispatch: aiDispatch
   };
 }
 

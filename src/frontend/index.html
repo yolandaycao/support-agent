@@ -37,6 +37,9 @@
             html += `<strong>Priority:</strong> ${data.assigned_priority}<br>`;
             html += `<strong>Category:</strong> ${data.assigned_category}<br>`;
             html += `<strong>Routed To:</strong> ${data.routed_to}<br>`;
+            if (data.ai_dispatch) {
+                html += `<strong>AI Suggestion:</strong> <span style="color: #0066cc">${data.ai_dispatch}</span><br>`;
+            }
             html += `<strong>Justification:</strong> ${data.justification}<br>`;
             html += `<strong>Answer:</strong> <span style="color:${data.answer === 'escalation needed' ? 'red' : 'green'}">${data.answer}</span><br>`;
             document.getElementById('result').innerHTML = html;

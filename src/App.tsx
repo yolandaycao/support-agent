@@ -20,7 +20,7 @@ const AIagents = {
   Best: { name: "Best", description: "Selects the best model for each query" },
   Network: { name: "Network & Connectivity", description: "An agent for all the Network & Connectivity needs!" },
   Microsoft365: { name: "Microsoft 365", description: "An agent for all your Microsoft Needs!" },
-  Cybersec: { name: "Cyber Security", description: "An agent for all your Cybersecurity Needs!" },
+  Cybersec: { name: "Cybersecurity", description: "An agent for all your Cybersecurity Needs!" },
 };
 
 function App() {
@@ -39,11 +39,7 @@ function App() {
   // Quirk: rotating placeholder
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const placeholders = [
-    "Ask anything...",
-    "How do I set up a SoC Network in Azure?",
-    "How do I speed up my internet?",
-    "How do I select the odd columns in Microsoft Excel?",
-    "How do I set up a SoC Network in AWS?",
+    "Ticket Content",
   ];
   
   useEffect(() => {
@@ -97,7 +93,7 @@ function App() {
         animate="visible"
         variants={heroVariants}
       >
-        <h1 className="hero-title">What do you want to know?</h1>
+        <h1 className="hero-title">MSP AI Dispatcher</h1>
         
         <form onSubmit={handleSearch} className="search-form">
           <div className="input-container">
@@ -110,20 +106,6 @@ function App() {
                 className="search-input"
                 style={{ flex: 1, marginBottom: 0 }}
               />
-              <div className="tool-icons">
-                <button type="button" className="icon-btn" title="Settings">
-                  <FiSettings />
-                </button>
-                <button type="button" className="icon-btn" title="Add feature">
-                  <FiPlus />
-                </button>
-                <button type="button" className="icon-btn" title="Attach link">
-                  <FiLink />
-                </button>
-                <button type="button" className="icon-btn" title="Voice input">
-                  <FiMic />
-                </button>
-              </div>
             </div>
 
             <div className="input-actions priorities-row">
@@ -153,33 +135,13 @@ function App() {
                   </div>
                 )}
               </div>
-              <div className="priority-radio-row">
-                <Tooltip title="Select your priority" placement="bottom">
-                  <div className="priority-label">
-                    Priority
-                  </div>
-                </Tooltip>
-                <Radio.Group
-                  options={[
-                    { label: 'Low', value: 'P0' },
-                    { label: 'Medium', value: 'P1' },
-                    { label: 'High', value: 'P2' },
-                  ]}
-                  value={priority}
-                  onChange={e => setPriority(e.target.value)}
-                  optionType="button"
-                  buttonStyle="solid"
-                  size="small"
-                  className="priority-radio"
-                />
-              </div>
               <motion.button
                 className="submit-btn"
                 variants={buttonVariants}
                 whileHover="hover"
                 type="submit"
               >
-                Answer
+                Dispatch
               </motion.button>
             </div>
           </div>
@@ -211,20 +173,57 @@ function App() {
               <div className="response-metadata">
                 <span className="priority-tag">Priority: {ticketResponse.assigned_priority}</span>
                 <span className="category-tag">Category: {ticketResponse.assigned_category}</span>
-                <span className="routed-tag">Routed to: {ticketResponse.routed_to}</span>
+                {/* <span className="routed-tag">Routed to: {ticketResponse.routed_to}</span> */}
+                {ticketResponse.ai_dispatch && (
+                  <span className="dispatch-tag">Dispatch: Ardence suggests assigning to: James</span>
+                )}
               </div>
             </div>
             
-            <div className="response-body">
+            <div className="response-body" style={{ marginBottom: '20px', backgroundColor: '#f8fafc', padding: '24px', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
               <div className="justification-section">
                 <h3>Analysis</h3>
                 <p>{ticketResponse.justification}</p>
+                <p>Scheduling reason: Both James and Dakota are responsible for M365. Dakota is booked till 8am tomorrow, James is open 2–5pm today. Assigning to James.</p>
               </div>
-              
-              <div className="answer-section">
-                <h3>Answer</h3>
-                <p>{ticketResponse?.answer}</p>
+              <div className="scheduling-section">
+                <h3>Scheduling</h3>
+                <p>Assigned to James (available today 2–5pm). Please schedule via TimeZest.</p>
               </div>
+              <div className="timezest-section" style={{ marginTop: '20px', textAlign: 'center' }}>
+                <motion.button
+                  className="timezest-btn"
+                  variants={buttonVariants}
+                  whileHover="hover"
+                  style={{
+                    padding: '12px 24px',
+                    borderRadius: '8px',
+                    backgroundColor: '#10B981',
+                    color: 'white',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}
+                >
+                  <FiLink /> Send TimeZest Request
+                </motion.button>
+              </div>
+            </div>
+            <div className="answer-section" style={{ 
+              backgroundColor: '#fff', 
+              padding: '24px',
+              borderRadius: '12px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+              border: '1px solid #e2e8f0',
+              color: '#000000'
+            }}>
+              <h3>Ticket Answer</h3>
+              <p style={{ color: '#000000' }}>{ticketResponse?.answer}</p>
+              <p style={{ color: '#000000' }}>Source: Mark Construction Onboarding Process <a href="https://support.microsoft.com/excel-setup" style={{ color: '#2563eb', textDecoration: 'underline' }}>[1]</a>, M365 Onboarding Guide <a href="https://support.microsoft.com/m365-guide" style={{ color: '#2563eb', textDecoration: 'underline' }}>[2]</a></p>
             </div>
           </div>
         )}

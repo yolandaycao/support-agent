@@ -5,6 +5,7 @@ export interface TicketResponse {
     routed_to: string;
     justification: string;
     answer: string;
+    ai_dispatch?: string;  // Optional property for AI dispatch information
   }
   
   const priorityMapping: Record<string, string> = {

@@ -1,0 +1,251 @@
+ticket_id,ticket_text,priority,user_id,sla_id,category
+1000,Office router lights are blinking red since yesterday,Medium,366,SLA-B,networking
+1001,URGENT: Wi‑Fi keeps disconnecting for warehouse scanners today,Urgent,344,SLA-C,networking
+1002,Office router lights are blinking red on laptop,High,225,SLA-C,networking
+1003,Employee reports extremely slow internet after 3 PM,Urgent,62,SLA-A,networking
+1004,URGENT: Office router lights are blinking red today,Medium,33,SLA-B,networking
+1005,Packet loss when pinging 8.8.8.8 on laptop,Low,302,SLA-C,networking
+1006,PLEASE HELP: Wi‑Fi keeps disconnecting for warehouse scanners today,Medium,302,SLA-A,networking
+1007,FYI: Printer offline when connected over Wi‑Fi only,Low,37,SLA-C,networking
+1008,PLEASE HELP: Cannot reach internal file server from branch office since yesterday,Low,118,SLA-A,networking
+1009,URGENT: Laptop unable to obtain IP address via DHCP today,Low,441,SLA-B,networking
+1010,Firewall blocking outbound SMTP traffic,Low,264,SLA-A,networking
+1011,Employee reports extremely slow internet after 3 PM since yesterday,High,343,SLA-B,networking
+1012,FYI: Firewall blocking outbound SMTP traffic,Medium,277,SLA-A,networking
+1013,Printer offline when connected over Wi‑Fi only after update,Urgent,125,SLA-B,networking
+1014,FYI: Office router lights are blinking red on laptop,Urgent,98,SLA-A,networking
+1015,URGENT: Firewall blocking outbound SMTP traffic,Low,338,SLA-B,networking
+1016,URGENT: VPN connection drops every few minutes since yesterday,High,217,SLA-B,networking
+1017,URGENT: Office router lights are blinking red,Urgent,443,SLA-C,networking
+1018,FYI: Employee reports extremely slow internet after 3 PM after update,Low,345,SLA-C,networking
+1019,URGENT: Firewall blocking outbound SMTP traffic since yesterday,Low,32,SLA-B,networking
+1020,URGENT: Office router lights are blinking red on laptop,High,410,SLA-A,networking
+1021,URGENT: Wi‑Fi keeps disconnecting for warehouse scanners after update,Medium,99,SLA-A,networking
+1022,FYI: Employee reports extremely slow internet after 3 PM on laptop,Urgent,72,SLA-B,networking
+1023,FYI: Wi‑Fi keeps disconnecting for warehouse scanners,Medium,143,SLA-B,networking
+1024,Wi‑Fi keeps disconnecting for warehouse scanners since yesterday,Medium,448,SLA-A,networking
+1025,FYI: Employee reports extremely slow internet after 3 PM,Urgent,414,SLA-C,networking
+1026,FYI: Wi‑Fi keeps disconnecting for warehouse scanners today,Low,26,SLA-C,networking
+1027,PLEASE HELP: Printer offline when connected over Wi‑Fi only after update,Low,497,SLA-A,networking
+1028,FYI: Cannot reach internal file server from branch office today,Medium,86,SLA-B,networking
+1029,FYI: Wi‑Fi keeps disconnecting for warehouse scanners on laptop,Urgent,247,SLA-A,networking
+1030,PLEASE HELP: Employee reports extremely slow internet after 3 PM since yesterday,Urgent,463,SLA-A,networking
+1031,URGENT: Wi‑Fi keeps disconnecting for warehouse scanners on laptop,Medium,195,SLA-A,networking
+1032,Printer offline when connected over Wi‑Fi only,Urgent,136,SLA-B,networking
+1033,Employee reports extremely slow internet after 3 PM after update,High,217,SLA-C,networking
+1034,PLEASE HELP: Employee reports extremely slow internet after 3 PM on laptop,Urgent,80,SLA-A,networking
+1035,Laptop unable to obtain IP address via DHCP,High,112,SLA-A,networking
+1036,FYI: Packet loss when pinging 8.8.8.8 since yesterday,Low,383,SLA-B,networking
+1037,FYI: Office router lights are blinking red after update,Low,26,SLA-C,networking
+1038,PLEASE HELP: Cannot reach internal file server from branch office,Urgent,258,SLA-C,networking
+1039,URGENT: Laptop unable to obtain IP address via DHCP on laptop,Medium,30,SLA-C,networking
+1040,URGENT: Site‑to‑site VPN tunnel is down today,Low,436,SLA-A,networking
+1041,URGENT: Firewall blocking outbound SMTP traffic on laptop,Low,305,SLA-A,networking
+1042,PLEASE HELP: Firewall blocking outbound SMTP traffic,Medium,207,SLA-A,networking
+1043,FYI: Office router lights are blinking red since yesterday,Medium,297,SLA-C,networking
+1044,Wi‑Fi keeps disconnecting for warehouse scanners today,Low,318,SLA-A,networking
+1045,Site‑to‑site VPN tunnel is down,Urgent,337,SLA-C,networking
+1046,Printer offline when connected over Wi‑Fi only on laptop,High,479,SLA-B,networking
+1047,URGENT: Cannot reach internal file server from branch office after update,Medium,343,SLA-C,networking
+1048,URGENT: Packet loss when pinging 8.8.8.8 since yesterday,High,123,SLA-B,networking
+1049,PLEASE HELP: Packet loss when pinging 8.8.8.8 today,Urgent,68,SLA-C,networking
+1050,PLEASE HELP: Email stuck in outbox on mobile since yesterday,High,48,SLA-A,microsoft_365
+1051,SharePoint site returns 404 after update,High,116,SLA-A,microsoft_365
+1052,Azure AD join fails on new device,Medium,13,SLA-A,microsoft_365
+1053,URGENT: Calendar invites arriving late on laptop,Medium,244,SLA-C,microsoft_365
+1054,URGENT: Email stuck in outbox on mobile since yesterday,Low,234,SLA-B,microsoft_365
+1055,URGENT: SharePoint site returns 404 since yesterday,Medium,368,SLA-C,microsoft_365
+1056,URGENT: Email stuck in outbox on mobile after update,Urgent,254,SLA-B,microsoft_365
+1057,FYI: Calendar invites arriving late on laptop,Medium,76,SLA-C,microsoft_365
+1058,Calendar invites arriving late on laptop,Low,458,SLA-A,microsoft_365
+1059,Email stuck in outbox on mobile today,Urgent,113,SLA-A,microsoft_365
+1060,Email stuck in outbox on mobile,Urgent,26,SLA-C,microsoft_365
+1061,URGENT: Calendar invites arriving late since yesterday,Medium,470,SLA-A,microsoft_365
+1062,FYI: OneDrive sync conflicts on desktop on laptop,Urgent,69,SLA-B,microsoft_365
+1063,FYI: Distribution list not updating,High,487,SLA-B,microsoft_365
+1064,PLEASE HELP: SharePoint site returns 404 since yesterday,Urgent,426,SLA-C,microsoft_365
+1065,Outlook keeps asking for password since yesterday,Urgent,460,SLA-A,microsoft_365
+1066,FYI: User can't access Teams meeting audio today,Urgent,231,SLA-B,microsoft_365
+1067,PLEASE HELP: Distribution list not updating on laptop,Medium,431,SLA-C,microsoft_365
+1068,Outlook keeps asking for password,High,393,SLA-C,microsoft_365
+1069,User can't access Teams meeting audio since yesterday,Urgent,321,SLA-A,microsoft_365
+1070,URGENT: Azure AD join fails on new device after update,High,226,SLA-A,microsoft_365
+1071,MFA prompt loops every login since yesterday,High,121,SLA-B,microsoft_365
+1072,URGENT: OneDrive sync conflicts on desktop,High,164,SLA-C,microsoft_365
+1073,PLEASE HELP: MFA prompt loops every login on laptop,Low,71,SLA-A,microsoft_365
+1074,URGENT: User can't access Teams meeting audio today,Medium,197,SLA-C,microsoft_365
+1075,PLEASE HELP: User can't access Teams meeting audio,Medium,362,SLA-A,microsoft_365
+1076,FYI: User can't access Teams meeting audio after update,Low,213,SLA-B,microsoft_365
+1077,FYI: OneDrive sync conflicts on desktop today,High,278,SLA-B,microsoft_365
+1078,PLEASE HELP: SharePoint site returns 404,Urgent,32,SLA-A,microsoft_365
+1079,URGENT: Distribution list not updating today,Urgent,200,SLA-C,microsoft_365
+1080,FYI: Distribution list not updating since yesterday,Low,439,SLA-C,microsoft_365
+1081,PLEASE HELP: OneDrive sync conflicts on desktop since yesterday,Urgent,245,SLA-A,microsoft_365
+1082,Email stuck in outbox on mobile since yesterday,High,153,SLA-B,microsoft_365
+1083,MFA prompt loops every login,Urgent,276,SLA-C,microsoft_365
+1084,URGENT: Email stuck in outbox on mobile on laptop,Medium,250,SLA-A,microsoft_365
+1085,PLEASE HELP: Azure AD join fails on new device since yesterday,High,224,SLA-B,microsoft_365
+1086,Calendar invites arriving late after update,Low,200,SLA-B,microsoft_365
+1087,URGENT: Azure AD join fails on new device since yesterday,Urgent,371,SLA-A,microsoft_365
+1088,PLEASE HELP: Outlook keeps asking for password,Urgent,471,SLA-A,microsoft_365
+1089,Excel file opens read‑only from SharePoint since yesterday,Low,465,SLA-B,microsoft_365
+1090,FYI: Azure AD join fails on new device,Low,43,SLA-C,microsoft_365
+1091,FYI: Email stuck in outbox on mobile after update,Urgent,70,SLA-B,microsoft_365
+1092,PLEASE HELP: MFA prompt loops every login since yesterday,Medium,26,SLA-B,microsoft_365
+1093,URGENT: Calendar invites arriving late today,Urgent,168,SLA-A,microsoft_365
+1094,PLEASE HELP: Excel file opens read‑only from SharePoint today,Urgent,168,SLA-B,microsoft_365
+1095,FYI: Azure AD join fails on new device after update,Urgent,143,SLA-B,microsoft_365
+1096,Calendar invites arriving late since yesterday,High,428,SLA-A,microsoft_365
+1097,PLEASE HELP: Distribution list not updating today,Urgent,10,SLA-C,microsoft_365
+1098,PLEASE HELP: Calendar invites arriving late today,Low,488,SLA-B,microsoft_365
+1099,FYI: SharePoint site returns 404 on laptop,Medium,333,SLA-A,microsoft_365
+1100,Laptop won’t power on even when plugged in today,High,44,SLA-A,hardware
+1101,Scanner not detected via USB on laptop,Low,286,SLA-B,hardware
+1102,URGENT: Monitor flickers after 10 minutes today,Medium,398,SLA-C,hardware
+1103,Server chassis fan alarm triggered on laptop,Urgent,231,SLA-B,hardware
+1104,PLEASE HELP: Scanner not detected via USB since yesterday,High,441,SLA-C,hardware
+1105,URGENT: Keyboard keys repeating randomly on laptop,Urgent,157,SLA-C,hardware
+1106,Printer jam code 15.03 in tray 2 today,Low,313,SLA-C,hardware
+1107,Docking station HDMI port dead on laptop,Low,486,SLA-A,hardware
+1108,FYI: Laptop won’t power on even when plugged in on laptop,Medium,136,SLA-C,hardware
+1109,PLEASE HELP: Mouse cursor jumps across screen today,Low,81,SLA-A,hardware
+1110,URGENT: Desktop making loud clicking noise,Medium,283,SLA-A,hardware
+1111,FYI: Mouse cursor jumps across screen,Medium,2,SLA-B,hardware
+1112,FYI: UPS battery beeping continuously,Urgent,353,SLA-C,hardware
+1113,PLEASE HELP: Mouse cursor jumps across screen,Urgent,150,SLA-A,hardware
+1114,FYI: Mouse cursor jumps across screen after update,Medium,148,SLA-C,hardware
+1115,PLEASE HELP: Monitor flickers after 10 minutes today,High,360,SLA-B,hardware
+1116,FYI: UPS battery beeping continuously on laptop,Low,352,SLA-A,hardware
+1117,PLEASE HELP: UPS battery beeping continuously after update,High,404,SLA-C,hardware
+1118,FYI: Mouse cursor jumps across screen since yesterday,Medium,218,SLA-A,hardware
+1119,Scanner not detected via USB since yesterday,Medium,332,SLA-A,hardware
+1120,URGENT: Server chassis fan alarm triggered after update,High,424,SLA-A,hardware
+1121,PLEASE HELP: Printer jam code 15.03 in tray 2 since yesterday,Low,31,SLA-A,hardware
+1122,PLEASE HELP: Laptop won’t power on even when plugged in since yesterday,High,305,SLA-C,hardware
+1123,FYI: Keyboard keys repeating randomly since yesterday,High,225,SLA-A,hardware
+1124,FYI: Docking station HDMI port dead on laptop,Urgent,353,SLA-B,hardware
+1125,URGENT: Laptop won’t power on even when plugged in,Urgent,483,SLA-B,hardware
+1126,PLEASE HELP: Scanner not detected via USB after update,Urgent,225,SLA-A,hardware
+1127,URGENT: UPS battery beeping continuously after update,Low,456,SLA-B,hardware
+1128,PLEASE HELP: Server chassis fan alarm triggered,High,310,SLA-B,hardware
+1129,FYI: Desktop making loud clicking noise today,Low,47,SLA-A,hardware
+1130,URGENT: Mouse cursor jumps across screen since yesterday,Low,392,SLA-C,hardware
+1131,FYI: Printer jam code 15.03 in tray 2 after update,High,296,SLA-A,hardware
+1132,FYI: UPS battery beeping continuously after update,Medium,241,SLA-C,hardware
+1133,FYI: UPS battery beeping continuously since yesterday,Urgent,470,SLA-B,hardware
+1134,FYI: Server chassis fan alarm triggered since yesterday,Medium,300,SLA-B,hardware
+1135,URGENT: Docking station HDMI port dead,Urgent,497,SLA-A,hardware
+1136,FYI: Scanner not detected via USB,Urgent,179,SLA-B,hardware
+1137,URGENT: UPS battery beeping continuously today,High,165,SLA-C,hardware
+1138,FYI: Printer jam code 15.03 in tray 2,Low,440,SLA-A,hardware
+1139,FYI: Scanner not detected via USB today,High,211,SLA-C,hardware
+1140,URGENT: Keyboard keys repeating randomly since yesterday,Urgent,148,SLA-C,hardware
+1141,URGENT: Laptop won’t power on even when plugged in since yesterday,Urgent,417,SLA-C,hardware
+1142,Laptop won’t power on even when plugged in on laptop,Low,233,SLA-A,hardware
+1143,URGENT: Docking station HDMI port dead after update,High,130,SLA-B,hardware
+1144,Desktop making loud clicking noise on laptop,Low,497,SLA-B,hardware
+1145,PLEASE HELP: Docking station HDMI port dead after update,Low,337,SLA-C,hardware
+1146,FYI: Server chassis fan alarm triggered today,Urgent,212,SLA-A,hardware
+1147,FYI: Laptop won’t power on even when plugged in after update,Medium,266,SLA-B,hardware
+1148,Desktop making loud clicking noise after update,Urgent,321,SLA-B,hardware
+1149,URGENT: Laptop won’t power on even when plugged in today,Low,105,SLA-B,hardware
+1150,URGENT: Create Slack account and add to channels since yesterday,High,168,SLA-C,onboarding
+1151,PLEASE HELP: Set up MFA token for CEO’s assistant,Urgent,90,SLA-A,onboarding
+1152,URGENT: New hire needs email account and VPN today,Medium,403,SLA-C,onboarding
+1153,Install Adobe Creative Cloud for designer on laptop,High,272,SLA-C,onboarding
+1154,Add new finance user to QuickBooks today,High,426,SLA-A,onboarding
+1155,PLEASE HELP: Set up Teams phone number for sales rep,High,468,SLA-B,onboarding
+1156,PLEASE HELP: Provision Azure AD user for contractor since yesterday,High,383,SLA-B,onboarding
+1157,FYI: Create Slack account and add to channels after update,Low,240,SLA-A,onboarding
+1158,PLEASE HELP: Set up MFA token for CEO’s assistant today,Medium,387,SLA-A,onboarding
+1159,URGENT: Set up MFA token for CEO’s assistant after update,Urgent,496,SLA-C,onboarding
+1160,URGENT: Create GitHub access for intern,High,47,SLA-B,onboarding
+1161,PLEASE HELP: Install Adobe Creative Cloud for designer since yesterday,Low,136,SLA-C,onboarding
+1162,FYI: Create Slack account and add to channels,Low,233,SLA-B,onboarding
+1163,FYI: Install Adobe Creative Cloud for designer on laptop,High,300,SLA-B,onboarding
+1164,PLEASE HELP: Grant CRM access for marketing coordinator today,High,56,SLA-C,onboarding
+1165,PLEASE HELP: Set up MFA token for CEO’s assistant since yesterday,Medium,242,SLA-A,onboarding
+1166,PLEASE HELP: Order laptop and peripherals for remote employee after update,High,469,SLA-C,onboarding
+1167,URGENT: Order laptop and peripherals for remote employee today,Medium,332,SLA-A,onboarding
+1168,Add new finance user to QuickBooks since yesterday,Urgent,466,SLA-C,onboarding
+1169,PLEASE HELP: Set up MFA token for CEO’s assistant after update,High,333,SLA-B,onboarding
+1170,PLEASE HELP: Provision Azure AD user for contractor,Low,72,SLA-A,onboarding
+1171,FYI: Provision Azure AD user for contractor,Low,156,SLA-B,onboarding
+1172,Set up MFA token for CEO’s assistant on laptop,Low,50,SLA-A,onboarding
+1173,Set up MFA token for CEO’s assistant today,Medium,199,SLA-B,onboarding
+1174,URGENT: Add new finance user to QuickBooks,High,344,SLA-C,onboarding
+1175,FYI: Set up MFA token for CEO’s assistant since yesterday,Urgent,301,SLA-C,onboarding
+1176,PLEASE HELP: Grant CRM access for marketing coordinator,Medium,454,SLA-B,onboarding
+1177,PLEASE HELP: Order laptop and peripherals for remote employee since yesterday,Low,427,SLA-B,onboarding
+1178,URGENT: Set up Teams phone number for sales rep since yesterday,Urgent,481,SLA-B,onboarding
+1179,Create GitHub access for intern after update,Low,354,SLA-B,onboarding
+1180,Set up Teams phone number for sales rep after update,Medium,228,SLA-B,onboarding
+1181,FYI: New hire needs email account and VPN,Medium,438,SLA-B,onboarding
+1182,FYI: Install Adobe Creative Cloud for designer since yesterday,Low,352,SLA-B,onboarding
+1183,URGENT: Add new finance user to QuickBooks today,High,32,SLA-B,onboarding
+1184,PLEASE HELP: Create Slack account and add to channels on laptop,High,98,SLA-A,onboarding
+1185,URGENT: Provision Azure AD user for contractor today,Urgent,47,SLA-C,onboarding
+1186,PLEASE HELP: Set up Teams phone number for sales rep on laptop,Medium,329,SLA-C,onboarding
+1187,PLEASE HELP: Create GitHub access for intern on laptop,Low,26,SLA-B,onboarding
+1188,URGENT: Provision Azure AD user for contractor after update,Medium,65,SLA-C,onboarding
+1189,PLEASE HELP: New hire needs email account and VPN since yesterday,Medium,36,SLA-C,onboarding
+1190,URGENT: Create Slack account and add to channels,Medium,301,SLA-A,onboarding
+1191,FYI: Set up MFA token for CEO’s assistant on laptop,Medium,169,SLA-A,onboarding
+1192,FYI: Set up MFA token for CEO’s assistant today,Low,142,SLA-A,onboarding
+1193,PLEASE HELP: Add new finance user to QuickBooks,Medium,277,SLA-B,onboarding
+1194,FYI: Order laptop and peripherals for remote employee since yesterday,Medium,57,SLA-C,onboarding
+1195,New hire needs email account and VPN on laptop,Low,68,SLA-A,onboarding
+1196,FYI: Grant CRM access for marketing coordinator today,High,405,SLA-A,onboarding
+1197,FYI: Create GitHub access for intern today,High,9,SLA-A,onboarding
+1198,Set up Teams phone number for sales rep since yesterday,High,27,SLA-A,onboarding
+1199,URGENT: Order laptop and peripherals for remote employee,Urgent,270,SLA-A,onboarding
+1200,PLEASE HELP: Phishing email reported by CFO after update,Urgent,90,SLA-A,cybersecurity
+1201,EDR alert: Powershell exploit attempt after update,Urgent,273,SLA-C,cybersecurity
+1202,URGENT: Zero‑day patch required for Exchange on laptop,Medium,257,SLA-C,cybersecurity
+1203,FYI: Endpoint agent flagged ransomware signature after update,High,37,SLA-B,cybersecurity
+1204,Endpoint agent flagged ransomware signature after update,Low,224,SLA-A,cybersecurity
+1205,PLEASE HELP: VPN account brute‑force lockout,Urgent,472,SLA-A,cybersecurity
+1206,PLEASE HELP: DNS sinkhole caught malicious domain,High,295,SLA-B,cybersecurity
+1207,FYI: Phishing email reported by CFO on laptop,Urgent,364,SLA-C,cybersecurity
+1208,Firewall detected port scan from external IP today,Urgent,149,SLA-A,cybersecurity
+1209,FYI: Suspicious login from foreign country after update,Urgent,11,SLA-B,cybersecurity
+1210,FYI: User clicked malicious link and entered creds after update,Medium,411,SLA-C,cybersecurity
+1211,PLEASE HELP: Zero‑day patch required for Exchange,Urgent,426,SLA-C,cybersecurity
+1212,URGENT: Phishing email reported by CFO after update,High,46,SLA-B,cybersecurity
+1213,URGENT: DNS sinkhole caught malicious domain after update,Low,125,SLA-B,cybersecurity
+1214,PLEASE HELP: EDR alert: Powershell exploit attempt after update,Urgent,269,SLA-A,cybersecurity
+1215,VPN account brute‑force lockout since yesterday,Urgent,446,SLA-B,cybersecurity
+1216,FYI: VPN account brute‑force lockout since yesterday,High,114,SLA-B,cybersecurity
+1217,URGENT: EDR alert: Powershell exploit attempt after update,Medium,40,SLA-C,cybersecurity
+1218,Phishing email reported by CFO,Low,272,SLA-C,cybersecurity
+1219,PLEASE HELP: Phishing email reported by CFO,Medium,464,SLA-B,cybersecurity
+1220,URGENT: EDR alert: Powershell exploit attempt on laptop,High,373,SLA-C,cybersecurity
+1221,FYI: Endpoint agent flagged ransomware signature,Medium,121,SLA-A,cybersecurity
+1222,FYI: VPN account brute‑force lockout after update,Medium,132,SLA-A,cybersecurity
+1223,FYI: Endpoint agent flagged ransomware signature on laptop,Medium,309,SLA-A,cybersecurity
+1224,FYI: Suspicious login from foreign country,Low,91,SLA-C,cybersecurity
+1225,URGENT: User clicked malicious link and entered creds today,Urgent,238,SLA-C,cybersecurity
+1226,URGENT: DNS sinkhole caught malicious domain,Urgent,349,SLA-C,cybersecurity
+1227,FYI: EDR alert: Powershell exploit attempt,High,443,SLA-C,cybersecurity
+1228,URGENT: Suspicious login from foreign country after update,High,78,SLA-B,cybersecurity
+1229,Zero‑day patch required for Exchange on laptop,Low,241,SLA-B,cybersecurity
+1230,Suspicious login from foreign country today,High,408,SLA-B,cybersecurity
+1231,FYI: Suspicious login from foreign country since yesterday,Low,181,SLA-C,cybersecurity
+1232,EDR alert: Powershell exploit attempt today,Low,159,SLA-B,cybersecurity
+1233,PLEASE HELP: Firewall detected port scan from external IP,Urgent,20,SLA-A,cybersecurity
+1234,Firewall detected port scan from external IP,High,426,SLA-B,cybersecurity
+1235,URGENT: Zero‑day patch required for Exchange after update,Low,331,SLA-A,cybersecurity
+1236,PLEASE HELP: VPN account brute‑force lockout since yesterday,Urgent,237,SLA-C,cybersecurity
+1237,FYI: Firewall detected port scan from external IP since yesterday,Low,231,SLA-C,cybersecurity
+1238,EDR alert: Powershell exploit attempt,Medium,165,SLA-C,cybersecurity
+1239,URGENT: Firewall detected port scan from external IP on laptop,Urgent,257,SLA-A,cybersecurity
+1240,Endpoint agent flagged ransomware signature since yesterday,Low,231,SLA-A,cybersecurity
+1241,PLEASE HELP: DNS sinkhole caught malicious domain after update,High,366,SLA-A,cybersecurity
+1242,PLEASE HELP: User clicked malicious link and entered creds after update,Medium,21,SLA-A,cybersecurity
+1243,URGENT: Suspicious login from foreign country on laptop,Urgent,225,SLA-C,cybersecurity
+1244,FYI: Phishing email reported by CFO after update,Medium,187,SLA-B,cybersecurity
+1245,FYI: DNS sinkhole caught malicious domain,High,199,SLA-B,cybersecurity
+1246,PLEASE HELP: Antivirus quarantine on PDF attachment on laptop,High,348,SLA-C,cybersecurity
+1247,Endpoint agent flagged ransomware signature today,Low,405,SLA-C,cybersecurity
+1248,URGENT: Suspicious login from foreign country today,High,34,SLA-B,cybersecurity
+1249,Phishing email reported by CFO after update,Low,286,SLA-C,cybersecurity
